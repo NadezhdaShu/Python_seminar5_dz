@@ -4,3 +4,15 @@
 # Пример:
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
+
+import math
+
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+len_list = math.ceil(len(list)/2)
+new_list = []
+
+for i in range(len_list):
+    new_list.append(list[i] * list[-i - 1])
+
+print(f"Список:\n {list}") 
+print(f"Произведение пар: \r\n {new_list}")
